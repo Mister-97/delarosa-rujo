@@ -214,9 +214,22 @@
       flex-shrink: 0;
     }
 
+    @keyframes badgeShine {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
     .collab-badge {
       display: inline-block;
-      background: var(--burgundy);
+      background: linear-gradient(
+        105deg,
+        var(--burgundy) 40%,
+        #e8a0c0 50%,
+        #fff 55%,
+        #e8a0c0 60%,
+        var(--burgundy) 70%
+      );
+      background-size: 200% auto;
+      animation: badgeShine 3s linear infinite;
       color: var(--white);
       font-size: 0.7rem;
       font-weight: 600;
